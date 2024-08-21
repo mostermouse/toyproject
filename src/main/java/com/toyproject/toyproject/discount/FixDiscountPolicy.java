@@ -1,0 +1,19 @@
+package com.toyproject.toyproject.discount;
+
+import com.toyproject.toyproject.member.Grade;
+import com.toyproject.toyproject.member.Member;
+
+public class FixDiscountPolicy implements DiscountPolicy{
+        //1000円割引
+    private int discountFixAmount = 1000;
+
+    @Override
+    public int discount(Member member, int price) {
+        if(member.getGrade() == Grade.VIP){
+            return discountFixAmount;
+        }else{
+            return 0;
+        }
+
+    }
+}
