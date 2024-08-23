@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SingletonContainerTest {
+
     @Test
     @DisplayName("spring container and singleton")
     void springContainer(){

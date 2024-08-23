@@ -11,7 +11,7 @@ import com.toyproject.toyproject.service.MemberService;
 import com.toyproject.toyproject.service.MemberServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
+//빈등록하면 항상 싱글톤을 보장하는 것이 아니기 때문에 달면 항상 보장 됨
 @Configuration
 public class AppConfig {
 
