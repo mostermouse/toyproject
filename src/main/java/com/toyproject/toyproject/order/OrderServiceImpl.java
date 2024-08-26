@@ -3,20 +3,27 @@ package com.toyproject.toyproject.order;
 import com.toyproject.toyproject.Repository.MemberRepository;
 import com.toyproject.toyproject.discount.DiscountPolicy;
 import com.toyproject.toyproject.member.Member;
+import jakarta.annotation.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderServiceImpl implements OrderService{
 
-    private final MemberRepository memberRepository;
+    private  final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl( MemberRepository memberRepository,  DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
+  /*
+    @Autowired
+    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy){
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }*/
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
