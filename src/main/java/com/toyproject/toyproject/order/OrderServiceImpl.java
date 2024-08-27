@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService{
 
-    private  final MemberRepository memberRepository;
+    private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
     @Autowired
@@ -18,7 +18,7 @@ public class OrderServiceImpl implements OrderService{
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
-  /*
+  /* 잘 안씀
     @Autowired
     public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy){
         this.memberRepository = memberRepository;
